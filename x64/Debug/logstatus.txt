@@ -1,0 +1,344 @@
+﻿2025-06-09 19:47:19 [WebView-Env] Ortam oluşturuluyor...
+2025-06-09 19:47:19 [WebView-Env] Kullanıcı veri klasörü: C:\Users\Admin\AppData\Local\CGPTViewer\UserData
+2025-06-09 19:47:21 [WebView-Env] Ortam başarıyla oluşturuldu.
+2025-06-09 19:47:21 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-09 19:47:21 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-09 19:47:24 [WebView-Ctrl] Controller başarıyla oluşturuldu.
+2025-06-09 19:47:24 [UserAgent] Başlangıç UserAgent: Mozilla/5.0 (Windows NT 6.3; W...
+2025-06-09 19:47:24 [BoundsSet] WebView sınırları ayarlandı.
+2025-06-09 19:47:24 [JSScript] JavaScript loglama betiği başarıyla yüklendi ve eklendi.
+2025-06-09 19:47:24 [ReklamEngelleme] Engelleme listesi bulunamadı. Varsayılanlar kullanılıyor.
+2025-06-09 19:47:24 [ReklamEngelleme] 9 varsayılan kural eklendi.
+2025-06-09 19:47:24 [NavigateCall] Ana Sayfa: https://www.google.com
+2025-06-09 19:47:25 [NavStarting] https://www.google.com/
+2025-06-09 19:47:25 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-09 19:47:31 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-09 19:47:31 [BaşlıkDeğişti] Google
+2025-06-09 19:47:32 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-09 19:47:33 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-09 19:47:38 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-09 19:49:11 [NavReq] https://www.google.com/
+2025-06-09 19:49:11 [NavStarting] https://www.google.com/
+2025-06-09 19:49:11 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-09 19:49:12 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-09 19:49:13 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-09 19:49:14 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-09 19:50:02 [NavStarting] https://chat.openai.com/
+2025-06-09 19:50:02 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-09 19:50:03 [NavStarting] https://chatgpt.com/
+2025-06-09 19:50:03 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-09 19:50:04 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-09 19:50:04 [BaşlıkDeğişti] ChatGPT
+2025-06-09 19:50:06 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-09 19:50:07 [NavCompleted] Başarılı: https://chatgpt.com/
+2025-06-09 19:50:08 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-09 19:50:19 [Kapanış] Uygulama kapatılıyor.
+2025-06-09 19:50:19 [Kapanış] Mesaj döngüsü bitti.
+2025-06-09 20:10:44 [WebView-Env] Ortam oluşturuluyor...
+2025-06-09 20:10:44 [WebView-Env] Kullanıcı veri klasörü: C:\Users\Admin\AppData\Local\CGPTViewer\UserData
+2025-06-09 20:10:45 [WebView-Env] Ortam başarıyla oluşturuldu.
+2025-06-09 20:10:46 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-09 20:10:46 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-09 20:10:57 [CaptureToggle] Log yakalama AKTİF
+2025-06-09 20:11:08 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-09 20:11:16 [NavStarting] https://gemini.google.com/
+2025-06-09 20:11:16 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-09 20:11:20 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-09 20:11:20 [BaşlıkDeğişti] ‎Google Gemini
+2025-06-09 20:11:21 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-09 20:11:26 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-09 20:11:26 [BaşlıkDeğişti] Google Gemini
+2025-06-09 20:11:37 [NavCompleted] Başarılı: https://gemini.google.com/app
+2025-06-09 20:11:55 [NavStarting] https://www.google.com/
+2025-06-09 20:11:55 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-09 20:11:57 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-09 20:11:57 [BaşlıkDeğişti] Google
+2025-06-09 20:11:58 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-09 20:11:59 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-09 20:12:02 [Kapanış] Uygulama kapatılıyor.
+2025-06-09 20:12:02 [Kapanış] Mesaj döngüsü bitti.
+2025-06-10 00:14:10 [WebView-Env] Ortam oluşturuluyor...
+2025-06-10 00:14:10 [WebView-Env] Kullanıcı veri klasörü: C:\Users\Admin\AppData\Local\CGPTViewer\UserData
+2025-06-10 00:14:10 [WebView-Env] Ortam başarıyla oluşturuldu.
+2025-06-10 00:14:11 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-10 00:14:11 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-10 00:14:12 [WebView-Ctrl] Controller başarıyla oluşturuldu.
+2025-06-10 00:14:12 [UserAgent] Başlangıç UserAgent: Mozilla/5.0 (Windows NT 6.3; W...
+2025-06-10 00:14:12 [BoundsSet] WebView sınırları ayarlandı.
+2025-06-10 00:14:12 [JSScript] JavaScript loglama betiği başarıyla yüklendi ve eklendi.
+2025-06-10 00:14:12 [ReklamEngelleme] Engelleme listesi bulunamadı. Varsayılanlar kullanılıyor.
+2025-06-10 00:14:12 [ReklamEngelleme] 9 varsayılan kural eklendi.
+2025-06-10 00:14:12 [NavigateCall] Ana Sayfa: https://www.google.com
+2025-06-10 00:14:12 [NavStarting] https://www.google.com/
+2025-06-10 00:14:12 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:14:15 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:14:15 [BaşlıkDeğişti] Google
+2025-06-10 00:14:18 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:14:18 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:14:29 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-10 00:14:43 [Kapanış] Uygulama kapatılıyor.
+2025-06-10 00:14:43 [Kapanış] Mesaj döngüsü bitti.
+2025-06-10 00:23:59 [WebView-Env] Ortam oluşturuluyor...
+2025-06-10 00:23:59 [WebView-Env] Kullanıcı veri klasörü: C:\Users\Admin\AppData\Local\CGPTViewer\UserData
+2025-06-10 00:24:00 [WebView-Env] Ortam başarıyla oluşturuldu.
+2025-06-10 00:24:00 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-10 00:24:00 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-10 00:24:02 [WebView-Ctrl] Controller başarıyla oluşturuldu.
+2025-06-10 00:24:02 [UserAgent] Başlangıç UserAgent: Mozilla/5.0 (Windows NT 6.3; W...
+2025-06-10 00:24:02 [BoundsSet] WebView sınırları ayarlandı.
+2025-06-10 00:24:02 [JSScript] JavaScript loglama betiği başarıyla yüklendi ve eklendi.
+2025-06-10 00:24:02 [ReklamEngelleme] Engelleme listesi bulunamadı. Varsayılanlar kullanılıyor.
+2025-06-10 00:24:02 [ReklamEngelleme] 9 varsayılan kural eklendi.
+2025-06-10 00:24:02 [NavigateCall] Ana Sayfa: https://www.google.com
+2025-06-10 00:24:02 [NavStarting] https://www.google.com/
+2025-06-10 00:24:02 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:24:03 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:24:03 [BaşlıkDeğişti] Google
+2025-06-10 00:24:04 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:24:04 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:24:08 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-10 00:26:21 [JSToggle] JavaScript Devre Dışı
+2025-06-10 00:26:21 [NavStarting] https://www.google.com/
+2025-06-10 00:26:21 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:26:21 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:26:22 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:26:22 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-10 00:26:22 [JSToggle] JavaScript Etkin
+2025-06-10 00:26:22 [NavStarting] https://www.google.com/
+2025-06-10 00:26:22 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:26:23 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:26:24 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:26:26 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-10 00:26:28 [UserAgent] Değiştirildi: Mozilla/5.0 (X11; Ubuntu; Linu...
+2025-06-10 00:26:28 [NavStarting] https://www.google.com/
+2025-06-10 00:26:28 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:26:28 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:26:30 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:26:31 [UserAgent] Değiştirildi: Mozilla/5.0 (iPhone; CPU iPhon...
+2025-06-10 00:26:31 [NavStarting] https://www.google.com/
+2025-06-10 00:26:31 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:26:31 [NavCompleted] Başarısız. Hata: 9, URL: https://www.google.com/
+2025-06-10 00:26:32 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:26:32 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:26:33 [UserAgent] Değiştirildi: Mozilla/5.0 (Linux; Android 11...
+2025-06-10 00:26:33 [NavStarting] https://www.google.com/
+2025-06-10 00:26:33 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:26:35 [NavCompleted] Başarısız. Hata: 9, URL: https://www.google.com/
+2025-06-10 00:26:35 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:26:35 [UserAgent] Değiştirildi: Varsayılan (Sistem)
+2025-06-10 00:26:35 [NavStarting] https://www.google.com/
+2025-06-10 00:26:35 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:26:37 [NavCompleted] Başarısız. Hata: 9, URL: https://www.google.com/
+2025-06-10 00:26:37 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:26:37 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:26:38 [DevTools] Geliştirici Araçları açıldı.
+2025-06-10 00:26:39 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-10 00:26:46 [Kapanış] Uygulama kapatılıyor.
+2025-06-10 00:26:46 [Kapanış] Mesaj döngüsü bitti.
+2025-06-10 00:26:57 [WebView-Env] Ortam oluşturuluyor...
+2025-06-10 00:26:57 [WebView-Env] Kullanıcı veri klasörü: C:\Users\Admin\AppData\Local\CGPTViewer\UserData
+2025-06-10 00:26:57 [WebView-Env] Ortam başarıyla oluşturuldu.
+2025-06-10 00:26:58 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-10 00:26:58 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-10 00:27:02 [WebView-Ctrl] Controller başarıyla oluşturuldu.
+2025-06-10 00:27:02 [UserAgent] Başlangıç UserAgent: Varsayılan (Sistem)
+2025-06-10 00:27:02 [BoundsSet] WebView sınırları ayarlandı.
+2025-06-10 00:27:02 [JSScript] JavaScript loglama betiği başarıyla yüklendi ve eklendi.
+2025-06-10 00:27:02 [ReklamEngelleme] Engelleme listesi bulunamadı. Varsayılanlar kullanılıyor.
+2025-06-10 00:27:02 [ReklamEngelleme] 9 varsayılan kural eklendi.
+2025-06-10 00:27:02 [NavigateCall] Ana Sayfa: https://www.google.com
+2025-06-10 00:27:02 [NavStarting] https://www.google.com/
+2025-06-10 00:27:03 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:27:08 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:27:08 [BaşlıkDeğişti] Google
+2025-06-10 00:27:09 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:27:10 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:27:28 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-10 00:32:35 [DevTools] Geliştirici Araçları açıldı.
+2025-06-10 00:33:18 [JSToggle] JavaScript Devre Dışı
+2025-06-10 00:33:18 [NavStarting] https://www.google.com/
+2025-06-10 00:33:18 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:33:18 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:33:18 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:33:18 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-10 00:33:21 [JSToggle] JavaScript Etkin
+2025-06-10 00:33:21 [NavStarting] https://www.google.com/
+2025-06-10 00:33:21 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:33:22 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:33:23 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:33:23 [OkumaModu] CSS enjekte edildi.
+2025-06-10 00:33:23 [OkumaModu] Aktif
+2025-06-10 00:33:23 [NavStarting] https://www.google.com/
+2025-06-10 00:33:23 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:33:24 [NavCompleted] Başarısız. Hata: 9, URL: https://www.google.com/
+2025-06-10 00:33:24 [OkumaModu] CSS enjekte edildi.
+2025-06-10 00:33:24 [OkumaModu] Sayfa JS devre dışı bırakıldı.
+2025-06-10 00:33:24 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:33:24 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:33:24 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-10 00:33:24 [OkumaModu] CSS enjekte edildi.
+2025-06-10 00:33:24 [OkumaModu] Sayfa JS devre dışı bırakıldı.
+2025-06-10 00:33:27 [OkumaModu] CSS kaldırıldı.
+2025-06-10 00:33:27 [OkumaModu] Pasif
+2025-06-10 00:33:27 [NavStarting] https://www.google.com/
+2025-06-10 00:33:27 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:33:29 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:33:30 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:33:31 [UserAgent] Değiştirildi: Mozilla/5.0 (Windows NT 6.3; W...
+2025-06-10 00:33:31 [NavStarting] https://www.google.com/
+2025-06-10 00:33:31 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:33:32 [NavCompleted] Başarısız. Hata: 9, URL: https://www.google.com/
+2025-06-10 00:33:32 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:33:32 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:33:34 [UserAgent] Değiştirildi: Mozilla/5.0 (X11; Ubuntu; Linu...
+2025-06-10 00:33:34 [NavStarting] https://www.google.com/
+2025-06-10 00:33:34 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:33:34 [NavCompleted] Başarısız. Hata: 9, URL: https://www.google.com/
+2025-06-10 00:33:35 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:33:36 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:33:36 [UserAgent] Değiştirildi: Mozilla/5.0 (iPhone; CPU iPhon...
+2025-06-10 00:33:36 [NavStarting] https://www.google.com/
+2025-06-10 00:33:36 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:33:36 [NavCompleted] Başarısız. Hata: 9, URL: https://www.google.com/
+2025-06-10 00:33:36 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:33:37 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:33:40 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-10 00:33:41 [UserAgent] Değiştirildi: Mozilla/5.0 (Linux; Android 11...
+2025-06-10 00:33:42 [NavStarting] https://www.google.com/
+2025-06-10 00:33:42 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:33:42 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:33:43 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:33:44 [UserAgent] Değiştirildi: Varsayılan (Sistem)
+2025-06-10 00:33:44 [NavStarting] https://www.google.com/
+2025-06-10 00:33:44 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:33:44 [NavCompleted] Başarısız. Hata: 9, URL: https://www.google.com/
+2025-06-10 00:33:44 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:33:45 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:33:46 [UserAgent] Değiştirildi: Mozilla/5.0 (Windows NT 6.3; W...
+2025-06-10 00:33:46 [NavStarting] https://www.google.com/
+2025-06-10 00:33:46 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 00:33:46 [NavCompleted] Başarısız. Hata: 9, URL: https://www.google.com/
+2025-06-10 00:33:46 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 00:33:47 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 00:33:50 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-10 00:34:05 [Kapanış] Uygulama kapatılıyor.
+2025-06-10 00:34:05 [Kapanış] Mesaj döngüsü bitti.
+2025-06-10 15:43:45 [WebView-Env] Ortam oluşturuluyor...
+2025-06-10 15:43:45 [WebView-Env] Kullanıcı veri klasörü: C:\Users\Admin\AppData\Local\CGPTViewer\UserData
+2025-06-10 15:43:45 [WebView-Env] Ortam başarıyla oluşturuldu.
+2025-06-10 15:43:45 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-10 15:43:45 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-10 15:43:46 [WebView-Ctrl] Controller başarıyla oluşturuldu.
+2025-06-10 15:43:46 [UserAgent] Başlangıç UserAgent: Mozilla/5.0 (Windows NT 6.3; W...
+2025-06-10 15:43:46 [BoundsSet] WebView sınırları ayarlandı.
+2025-06-10 15:43:46 [JSScript] JavaScript loglama betiği başarıyla yüklendi ve eklendi.
+2025-06-10 15:43:46 [ReklamEngelleme] Engelleme listesi bulunamadı. Varsayılanlar kullanılıyor.
+2025-06-10 15:43:46 [ReklamEngelleme] 9 varsayılan kural eklendi.
+2025-06-10 15:43:46 [NavigateCall] Ana Sayfa: https://www.google.com
+2025-06-10 15:43:46 [NavStarting] https://www.google.com/
+2025-06-10 15:43:46 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 15:43:48 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 15:43:58 [BaşlıkDeğişti] Google
+2025-06-10 15:44:03 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 15:44:03 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 15:44:22 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-10 15:47:54 [NavReq] https://www.google.com/
+2025-06-10 15:47:54 [NavStarting] https://www.google.com/
+2025-06-10 15:47:54 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-10 15:47:54 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-10 15:47:55 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-10 15:47:57 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-10 15:47:58 [Kapanış] Uygulama kapatılıyor.
+2025-06-10 15:47:58 [Kapanış] Mesaj döngüsü bitti.
+2025-06-11 15:26:11 [WebView-Env] Ortam oluşturuluyor...
+2025-06-11 15:26:11 [WebView-Env] Kullanıcı veri klasörü: C:\Users\Admin\AppData\Local\CGPTViewer\UserData
+2025-06-11 15:26:11 [WebView-Env] Ortam başarıyla oluşturuldu.
+2025-06-11 15:26:11 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-11 15:26:12 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-11 15:26:13 [WebView-Ctrl] Controller başarıyla oluşturuldu.
+2025-06-11 15:26:14 [UserAgent] Başlangıç UserAgent: Mozilla/5.0 (Windows NT 6.3; W...
+2025-06-11 15:26:14 [BoundsSet] WebView sınırları ayarlandı.
+2025-06-11 15:26:16 [JSScript] JavaScript loglama betiği başarıyla yüklendi ve eklendi.
+2025-06-11 15:26:16 [ReklamEngelleme] Engelleme listesi bulunamadı. Varsayılanlar kullanılıyor.
+2025-06-11 15:26:16 [ReklamEngelleme] 9 varsayılan kural eklendi.
+2025-06-11 15:26:16 [NavigateCall] Ana Sayfa: https://www.google.com
+2025-06-11 15:26:17 [NavStarting] https://www.google.com/
+2025-06-11 15:26:17 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-11 15:26:19 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-11 15:26:19 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-11 15:26:19 [BaşlıkDeğişti] Google
+2025-06-11 15:26:24 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-11 15:26:24 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-11 15:26:39 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-11 15:27:08 [Kapanış] Uygulama kapatılıyor.
+2025-06-11 15:27:08 [Kapanış] Mesaj döngüsü bitti.
+2025-06-12 01:19:47 [WebView-Env] Ortam oluşturuluyor...
+2025-06-12 01:19:47 [WebView-Env] Kullanıcı veri klasörü: C:\Users\Admin\AppData\Local\CGPTViewer\UserData
+2025-06-12 01:19:47 [WebView-Env] Ortam başarıyla oluşturuldu.
+2025-06-12 01:19:48 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-12 01:19:49 [WebView-Ctrl] Controller başarıyla oluşturuldu.
+2025-06-12 01:19:49 [UserAgent] Başlangıç UserAgent: Mozilla/5.0 (Windows NT 6.3; W...
+2025-06-12 01:19:49 [BoundsSet] WebView sınırları ayarlandı.
+2025-06-12 01:19:49 [ReklamEngelleme] Engelleme listesi bulunamadı. Varsayılanlar kullanılıyor.
+2025-06-12 01:19:49 [ReklamEngelleme] 9 varsayılan kural eklendi.
+2025-06-12 01:19:49 [NavigateCall] Ana Sayfa: https://www.google.com
+2025-06-12 01:19:49 [NavStarting] https://www.google.com/
+2025-06-12 01:19:49 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-12 01:19:50 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-12 01:19:50 [BaşlıkDeğişti] Google
+2025-06-12 01:19:53 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-12 01:19:53 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-12 01:20:01 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-12 01:20:11 [NavStarting] https://chat.openai.com/
+2025-06-12 01:20:11 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-12 01:20:11 [NavStarting] https://chatgpt.com/
+2025-06-12 01:20:11 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-12 01:20:12 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-12 01:20:12 [BaşlıkDeğişti] ChatGPT
+2025-06-12 01:20:14 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-12 01:20:16 [NavCompleted] Başarılı: https://chatgpt.com/
+2025-06-12 01:20:17 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-12 01:20:44 [Kapanış] Uygulama kapatılıyor.
+2025-06-12 01:20:44 [Kapanış] Mesaj döngüsü bitti.
+2025-06-12 01:39:28 [WebView-Env] Ortam oluşturuluyor...
+2025-06-12 01:39:28 [WebView-Env] Kullanıcı veri klasörü: C:\Users\Admin\AppData\Local\CGPTViewer\UserData
+2025-06-12 01:39:28 [WebView-Env] Ortam başarıyla oluşturuldu.
+2025-06-12 01:39:28 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-12 01:39:28 [WebView-Ctrl] Controller başarıyla oluşturuldu.
+2025-06-12 01:39:28 [UserAgent] Başlangıç UserAgent: Mozilla/5.0 (Windows NT 6.3; W...
+2025-06-12 01:39:28 [BoundsSet] WebView sınırları ayarlandı.
+2025-06-12 01:39:28 [ReklamEngelleme] Engelleme listesi bulunamadı. Varsayılanlar kullanılıyor.
+2025-06-12 01:39:28 [ReklamEngelleme] 9 varsayılan kural eklendi.
+2025-06-12 01:39:28 [NavigateCall] Ana Sayfa: https://www.google.com
+2025-06-12 01:39:29 [NavStarting] https://www.google.com/
+2025-06-12 01:39:29 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-12 01:39:33 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-12 01:39:33 [BaşlıkDeğişti] Google
+2025-06-12 01:39:37 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-12 01:39:39 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-12 01:39:53 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-12 01:40:06 [NavReq] https://www.google.com/
+2025-06-12 01:40:06 [NavStarting] https://www.google.com/
+2025-06-12 01:40:06 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-12 01:40:06 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-12 01:40:07 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-12 01:40:10 [NavCompleted] Başarılı: https://www.google.com/
+2025-06-12 01:40:11 [Kapanış] Uygulama kapatılıyor.
+2025-06-12 01:40:12 [Kapanış] Mesaj döngüsü bitti.
+2025-06-12 01:59:07 [WebView-Env] Ortam oluşturuluyor...
+2025-06-12 01:59:07 [WebView-Env] Kullanıcı veri klasörü: C:\Users\Admin\AppData\Local\CGPTViewer\UserData
+2025-06-12 01:59:07 [WebView-Env] Ortam başarıyla oluşturuldu.
+2025-06-12 01:59:08 [Başlangıç] Pencere oluşturuldu ve WebView başlatılıyor.
+2025-06-12 01:59:09 [WebView-Ctrl] Controller başarıyla oluşturuldu.
+2025-06-12 01:59:09 [UserAgent] Başlangıç UserAgent: Mozilla/5.0 (Windows NT 6.3; W...
+2025-06-12 01:59:09 [BoundsSet] WebView sınırları ayarlandı.
+2025-06-12 01:59:09 [ReklamEngelleme] Engelleme listesi bulunamadı. Varsayılanlar kullanılıyor.
+2025-06-12 01:59:09 [ReklamEngelleme] 9 varsayılan kural eklendi.
+2025-06-12 01:59:09 [NavigateCall] Ana Sayfa: https://www.google.com
+2025-06-12 01:59:09 [NavStarting] https://www.google.com/
+2025-06-12 01:59:09 [AnalizLogları] Tüm detaylı analiz logları temizlendi (Capture Aktif).
+2025-06-12 01:59:11 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-12 01:59:11 [BaşlıkDeğişti] Google
+2025-06-12 01:59:13 [GeçmişDeğişti] Navigasyon geçmişi güncellendi.
+2025-06-12 01:59:13 [DOMContentLoaded] Sayfa DOM yüklendi.
+2025-06-12 02:21:32 [WebView-Env] Ortam olu2025-06-12 02:22:17 [Kapan2025-06-12 02:29:32 [WebView-Env] Ortam olu2025-06-12 02:32:46 [Kapan2025-07-23 01:40:13 [WebView-Env] Ortam olu2025-07-23 01:40:15 [AnalizLoglar2025-07-23 01:43:37 [WebView-Env] Ortam olu2025-07-23 01:43:37 [AnalizLoglar2025-07-23 01:44:08 [CaptureToggle] Log yakalama AKT2025-07-23 02:08:35 [WebView-Env] Ortam olu2025-07-23 02:08:42 [AnalizLoglar2025-07-23 02:09:34 [CaptureToggle] Log yakalama AKT2025-07-23 02:11:02 [WebView-Env] Ortam olu2025-07-23 02:12:26 [Kapan2025-07-31 15:02:04 [WebView-Env] Ortam olu2025-07-31 15:11:02 [Kapan2025-07-31 15:31:42 [WebView-Env] Ortam olu2025-07-31 15:35:51 [Kapan2025-08-01 22:18:20 [WebView-Env] Ortam olu2025-08-02 01:03:49 [Kapan2025-08-02 01:17:00 [WebView-Env] Ortam olu2025-08-02 01:27:10 [Kapan2025-08-02 04:01:19 [WebView-Env] Ortam olu2025-08-02 12:10:53 [Kapan2025-08-14 01:31:39 [WebView-Env] Ortam olu2025-08-14 01:33:26 [Kapan2025-08-14 01:34:13 [WebView-Env] Ortam olu2025-08-14 01:34:34 [Kapan2025-08-15 05:19:41 [WebView-Env] Ortam olu2025-08-15 14:32:13 [Kapan2025-08-16 00:14:02 [WebView-Env] Ortam olu2025-08-16 00:29:02 [Kapan2025-08-15 20:25:41 [WebView-Env] Ortam olu2025-08-16 18:52:46 [Kapan2025-08-16 20:25:15 [WebView-Env] Ortam olu2025-08-17 04:23:47 [Kapan2025-08-17 11:54:47 [WebView-Env] Ortam olu2025-08-17 12:44:55 [Kapan2025-08-17 13:12:23 [WebView-Env] Ortam olu2025-08-17 21:26:09 [Kapan2025-08-17 22:51:12 [WebView-Env] Ortam olu2025-08-17 22:53:20 [Kapan2025-08-18 00:57:24 [WebView-Env] Ortam olu2025-08-18 01:26:11 [Kapan2025-08-18 10:18:14 [WebView-Env] Ortam olu2025-08-18 10:21:27 [Kapan2025-08-18 14:17:22 [WebView-Env] Ortam olu2025-08-18 14:19:36 [Kapan2025-08-18 15:11:09 [WebView-Env] Ortam olu2025-08-18 15:13:31 [Kapan2025-08-18 16:07:49 [WebView-Env] Ortam olu2025-08-18 16:09:31 [Kapan2025-08-18 19:42:33 [WebView-Env] Ortam olu2025-08-18 23:16:32 [Kapan2025-08-20 13:42:24 [WebView-Env] Ortam olu2025-08-20 19:23:27 [Kapan

@@ -1,0 +1,44 @@
+2025-08-18 16:07:55: HTTP Güvenlik Ba2025-08-18 16:07:55:   - Content-Security-Policy: Yok
+2025-08-18 16:07:55:   - X-Frame-Options: SAMEORIGIN
+2025-08-18 16:07:55:   - Strict-Transport-Security: Yok
+2025-08-18 16:07:55:   - X-Content-Type-Options: Yok
+2025-08-18 16:07:55:   - Referrer-Policy: Yok
+2025-08-18 16:07:55:   - Permissions-Policy: Yok
+2025-08-18 16:07:55:   - X-XSS-Protection: 0
+2025-08-18 16:07:55:   - Cross-Origin-Opener-Policy: Yok
+2025-08-18 16:07:55:   - Cross-Origin-Embedder-Policy: Yok
+2025-08-18 16:07:55:   - Cross-Origin-Resource-Policy: Yok
+2025-08-18 16:07:55: Sayfa Teknolojisi (Sunucu - X-Powered-By): Belirtilmemi2025-08-18 16:07:55: Sayfa Boyutu (Content-Length): 0 B
+2025-08-18 16:07:55: HTTP Güvenlik Ba2025-08-18 16:07:55:   - Content-Security-Policy: object-src 'none';base-uri 'self';script-src 'nonce-dsowjZ6nXmp_o1nDy6Bi6A' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other
+2025-08-18 16:07:55:   - X-Frame-Options: SAMEORIGIN
+2025-08-18 16:07:55:   - Strict-Transport-Security: Yok
+2025-08-18 16:07:55:   - X-Content-Type-Options: Yok
+2025-08-18 16:07:55:   - Referrer-Policy: Yok
+2025-08-18 16:07:55:   - Permissions-Policy: unload=()
+2025-08-18 16:07:55:   - X-XSS-Protection: 0
+2025-08-18 16:07:55:   - Cross-Origin-Opener-Policy: same-origin-allow-popups; report-to="gws"
+2025-08-18 16:07:55:   - Cross-Origin-Embedder-Policy: Yok
+2025-08-18 16:07:55:   - Cross-Origin-Resource-Policy: Yok
+2025-08-18 16:07:55: Sayfa Teknolojisi (Sunucu - X-Powered-By): Belirtilmemi2025-08-18 16:07:55: Sayfa Boyutu (Content-Length): 0 B
+2025-08-18 16:07:55: HTTP Güvenlik Ba2025-08-18 16:07:55:   - Content-Security-Policy: frame-ancestors https://www.google.com
+2025-08-18 16:07:55:   - X-Frame-Options: ALLOW-FROM https://www.google.com
+2025-08-18 16:07:55:   - Strict-Transport-Security: max-age=31536000; includeSubDomains
+2025-08-18 16:07:55:   - X-Content-Type-Options: nosniff
+2025-08-18 16:07:55:   - Referrer-Policy: Yok
+2025-08-18 16:07:55:   - Permissions-Policy: ch-ua-arch=*
+2025-08-18 16:07:55:   - X-XSS-Protection: 0
+2025-08-18 16:07:55:   - Cross-Origin-Opener-Policy: same-origin
+2025-08-18 16:07:55:   - Cross-Origin-Embedder-Policy: require-corp
+2025-08-18 16:07:55:   - Cross-Origin-Resource-Policy: same-site
+2025-08-18 16:07:55: Sayfa Teknolojisi (Sunucu - X-Powered-By): Belirtilmemi2025-08-18 16:07:55: Sayfa Boyutu (Content-Length): Bilinmiyor
+2025-08-18 16:07:56: HTTP Güvenlik Ba2025-08-18 16:07:56:   - Content-Security-Policy: Yok
+2025-08-18 16:07:56:   - X-Frame-Options: SAMEORIGIN
+2025-08-18 16:07:56:   - Strict-Transport-Security: Yok
+2025-08-18 16:07:56:   - X-Content-Type-Options: Yok
+2025-08-18 16:07:56:   - Referrer-Policy: Yok
+2025-08-18 16:07:56:   - Permissions-Policy: Yok
+2025-08-18 16:07:56:   - X-XSS-Protection: 0
+2025-08-18 16:07:56:   - Cross-Origin-Opener-Policy: Yok
+2025-08-18 16:07:56:   - Cross-Origin-Embedder-Policy: Yok
+2025-08-18 16:07:56:   - Cross-Origin-Resource-Policy: cross-origin
+2025-08-18 16:07:56: Sayfa Teknolojisi (Sunucu - X-Powered-By): Belirtilmemi2025-08-18 16:07:56: Sayfa Boyutu (Content-Length): 131 B

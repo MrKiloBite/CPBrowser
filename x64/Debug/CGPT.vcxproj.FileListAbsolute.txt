@@ -1,0 +1,2 @@
+C:\Users\Admin\source\repos2\CGPT\x64\Debug\CGPT.exe
+C:\Users\Admin\source\repos2\CGPT\x64\Debug\WebView2Loader.dll

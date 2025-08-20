@@ -1,0 +1,8 @@
+﻿  CGPT.cpp
+C:\Users\Admin\source\repos2\CGPT\CGPT.cpp(5,1): warning C4005: 'UNICODE': makro yeniden tanımlama
+C:\Users\Admin\source\repos2\CGPT\CGPT.cpp(5,1): message : 'UNICODE' önceden komut satırında bildirildi
+C:\Users\Admin\source\repos2\CGPT\CGPT.cpp(6,1): warning C4005: '_UNICODE': makro yeniden tanımlama
+C:\Users\Admin\source\repos2\CGPT\CGPT.cpp(6,1): message : '_UNICODE' önceden komut satırında bildirildi
+  CGPT.vcxproj -> C:\Users\Admin\source\repos2\CGPT\x64\Debug\CGPT.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
