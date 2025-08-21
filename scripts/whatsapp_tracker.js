@@ -1,10 +1,11 @@
-// WhatsApp Durum Takip, Bağlantı Testi ve Raporlama Scripti v2.0
+// WhatsApp Durum Takip, Bağlantı Testi ve Raporlama Scripti v2.1
 // Bu dosya, CGPT.cpp tarafından okunup çalıştırılır.
+// Değişiklik: forceKeepAlive fonksiyonuna detaylı loglama ve daha gerçekçi event dispatch eklendi.
 
 (function() {
     try {
         const post = (msg) => window.chrome.webview.postMessage(msg);
-        post('DETAIL:Ana script v2.0 çalıştırıldı.');
+        post('DETAIL:Ana script v2.1 çalıştırıldı.');
 
         // Scriptin yeniden çalıştırılması durumunda önceki takipçileri temizle
         if (window.whatsAppTracker) {
@@ -17,21 +18,21 @@
             lastActivity: '',
             periodicCheckCounter: 0,
             connectionTestResults: [],
-            
+
             observer: null,
             statusInterval: null,
             connectionInterval: null,
             minuteLogInterval: null,
-            keepAliveInterval: null, // Yeni "forced-brute-click" için
-            
+            keepAliveInterval: null,
+
             // Element seçicileri
             HEADER_SELECTOR: '#main > header',
             ONLINE_SELECTOR: 'span[title="çevrimiçi"]',
             ACTIVITY_SELECTOR: 'span[title="yazıyor..."], span[title="kaydediyor..."]',
-            RECONNECT_BUTTON_SELECTOR: 'button[class*="xjb2p0i"]', // "Tekrar Bağlan" butonu
-            CONNECTION_ERROR_PANEL_SELECTOR: '#side span.x78zum5.x1c4vz4f', // "Bilgisayar bağlı değil" panelini içeren genel seçici
-            CHAT_BACKGROUND_SELECTOR: 'div[data-testid="conversation-panel-body"]', // Tıklama için güvenli alan
-            
+            RECONNECT_BUTTON_SELECTOR: 'button[class*="xjb2p0i"]',
+            CONNECTION_ERROR_PANEL_SELECTOR: '#side span.x78zum5.x1c4vz4f',
+            CHAT_BACKGROUND_SELECTOR: 'div[data-testid="conversation-panel-body"]',
+
             // Ana başlatma fonksiyonu
             start: function() {
                 post('DETAIL:Takip sistemi başlatılıyor...');
@@ -54,12 +55,12 @@
 
                 this.connectionInterval = setInterval(() => this.runConnectionTests(), 30000);
                 post('DETAIL:Bağlantı test döngüsü (30 saniyede 1) başarıyla başlatıldı.');
-                
+
                 this.minuteLogInterval = setInterval(() => this.logMinuteSummary(), 60000);
                 post('DETAIL:Dakikalık özet loglama (60 saniyede 1) başarıyla başlatıldı.');
 
-                this.keepAliveInterval = setInterval(() => this.forceKeepAlive(), 5000); // Her 5 saniyede bir
-                post('DETAIL:"Forced-Brute-Click" (Bağlantı Canlı Tutma) 5 saniyede bir devrede.');
+                this.keepAliveInterval = setInterval(() => this.forceKeepAlive(), 5000);
+                post('DETAIL:Bağlantı Canlı Tutma (Keep-Alive) 5 saniyede bir devrede.');
 
                 this.checkStatus(headerElement);
                 this.runConnectionTests();
@@ -113,7 +114,7 @@
                 } else {
                     results.push('  - 2. Veri Alışverişi: BAŞARISIZ (10 saniyede yeni kaynak yüklenmedi)');
                 }
-                
+
                 // Test 3 & 5: WebSocket ve Bağlantı Uyarısı Kontrolü
                 const errorPanel = document.querySelector(this.CONNECTION_ERROR_PANEL_SELECTOR);
                 let isErrorVisible = false;
@@ -141,7 +142,7 @@
                 } catch (e) {
                     results.push('  - 4. Bağlantı Canlandırma: BAŞARISIZ (Simülasyon sırasında hata: ' + e.message + ')');
                 }
-                
+
                 this.connectionTestResults.push(results.join('\r\n'));
             },
 
@@ -149,8 +150,11 @@
             forceKeepAlive: function() {
                 const chatBg = document.querySelector(this.CHAT_BACKGROUND_SELECTOR);
                 if (chatBg) {
-                    chatBg.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));
-                    chatBg.dispatchEvent(new MouseEvent('mouseup', { bubbles: true }));
+                    post('DETAIL:Keep-alive: Found element with selector: ' + this.CHAT_BACKGROUND_SELECTOR + '. Simulating click.');
+                    chatBg.dispatchEvent(new MouseEvent('mousedown', { bubbles: true, composed: true, view: window, cancelable: true, buttons: 1 }));
+                    chatBg.dispatchEvent(new MouseEvent('mouseup', { bubbles: true, composed: true, view: window, cancelable: true, buttons: 1 }));
+                } else {
+                    post('ERROR:Keep-alive: Could not find element with selector: ' + this.CHAT_BACKGROUND_SELECTOR);
                 }
             },
 
