@@ -149,8 +149,8 @@
             forceKeepAlive: function() {
                 const chatBg = document.querySelector(this.CHAT_BACKGROUND_SELECTOR);
                 if (chatBg) {
-                    chatBg.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));
-                    chatBg.dispatchEvent(new MouseEvent('mouseup', { bubbles: true }));
+                    chatBg.dispatchEvent(new MouseEvent('click', { bubbles: true, composed: true }));
+                    post('DETAIL:Keep-alive click simulated on chat background.');
                 }
             },
 
