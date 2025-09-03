@@ -33,7 +33,7 @@
 #elif defined(_M_ARM64)
 #pragma comment(lib, "C:/Users/Admin/source/repos2/CGPT/packages/Microsoft.Web.WebView2.1.0.3296-prerelease/build/native/arm64/WebView2Loader.dll.lib")
 #else
-#pragma comment(lib, "WebView2LoaderStatic.lib") 
+#pragma comment(lib, "WebView2LoaderStatic.lib")
 #endif
 #pragma comment(lib, "winhttp.lib")
 #pragma comment(lib, "Ole32.lib") // CoInitializeEx için eklendi
@@ -48,21 +48,21 @@ using namespace Microsoft::WRL;
 #define ID_DEV_BTN          1004
 #define ID_UA_BTN           1005
 #define ID_READER_BTN       1006
-#define ID_JS_TOGGLE_BTN    1007 
+#define ID_JS_TOGGLE_BTN    1007
 #define ID_CLEAR_CACHE_BTN  1008
 #define ID_LOG_BTN          1009
 #define ID_JS_LOG_BTN       1010
 #define ID_HTTP_LOG_BTN     1011
-#define ID_IMG_LOG_BTN      1012 
+#define ID_MEDIA_LOG_BTN    1012
 #define ID_ALT_INFO_BTN     1013
 #define ID_FOUND_FOR_BTN    1014
 #define ID_NETLOG_BTN       1015
-#define ID_CAPTURE_CHK      1016 
+#define ID_CAPTURE_CHK      1016
 #define ID_GOOGLE_BTN       1017
 #define ID_CHATGPT_BTN      1018
 #define ID_GEMINI_BTN       1019
 #define ID_STATUSBAR        2000
-#define ID_TIMER_PAGE_TIME  1 
+#define ID_TIMER_PAGE_TIME  1
 
 // --- WHATSAPP ID'LERİ ---
 #define ID_WHATSAPP_BTN          1020
@@ -85,7 +85,7 @@ HWND g_hClearCacheBtn = nullptr;
 HWND g_hLogBtn = nullptr;
 HWND g_hJsLogBtn = nullptr;
 HWND g_hHttpLogBtn = nullptr;
-HWND g_hImgLogBtn = nullptr;
+HWND g_hMediaLogBtn = nullptr;
 HWND g_hAltInfoBtn = nullptr;
 HWND g_hFoundForBtn = nullptr;
 HWND g_hNetLogBtn = nullptr;
@@ -111,7 +111,7 @@ std::wstring g_appDir;
 std::wstring g_logStatusFile;
 std::wstring g_jsDetailsFile;
 std::wstring g_httpDetailsFile;
-std::wstring g_imageLogFile;
+std::wstring g_mediaLogFile;
 std::wstring g_altInfoFile;
 std::wstring g_foundForFile;
 std::wstring g_searchForFile;
@@ -465,7 +465,7 @@ void ClearAllAnalysisSpecificLogs() {
     if (!g_isCaptureActive) return;
 
     const wchar_t* filesToClear[] = {
-        g_jsDetailsFile.c_str(), g_httpDetailsFile.c_str(), g_imageLogFile.c_str(),
+        g_jsDetailsFile.c_str(), g_httpDetailsFile.c_str(), g_mediaLogFile.c_str(),
         g_altInfoFile.c_str(), g_foundForFile.c_str(), g_netLogFile.c_str()
     };
     for (const auto* filePath : filesToClear) {
@@ -726,9 +726,9 @@ void PerformPageAnalysis() {
                     document.querySelectorAll('a[href]').forEach(a => {
                         try {
                             let fullUrl = new URL(a.href, document.baseURI).href;
-                            if (fullUrl.startsWith(currentOrigin) && 
-                                !fullUrl.includes('#') && 
-                                !fullUrl.startsWith('mailto:') && 
+                            if (fullUrl.startsWith(currentOrigin) &&
+                                !fullUrl.includes('#') &&
+                                !fullUrl.startsWith('mailto:') &&
                                 !fullUrl.startsWith('tel:') &&
                                 fullUrl !== location.href) {
                                 links.push(fullUrl);
@@ -736,7 +736,7 @@ void PerformPageAnalysis() {
                         } catch (e) { /* ignore invalid URLs */ }
                     });
                 } catch (e) { /* ignore errors */ }
-                return JSON.stringify(Array.from(new Set(links))); 
+                return JSON.stringify(Array.from(new Set(links)));
             })();
         )", Callback<ICoreWebView2ExecuteScriptCompletedHandler>(
     [](HRESULT hr, LPCWSTR result) -> HRESULT {
@@ -805,7 +805,7 @@ void PerformPageAnalysis() {
                 try {
                     document.querySelectorAll('a[href]').forEach(a => {
                         try {
-                            let hostname = new URL(a.href).hostname.toLowerCase(); 
+                            let hostname = new URL(a.href).hostname.toLowerCase();
                             socialDomains.forEach(domain => {
                                 if (hostname.includes(domain)) {
                                     foundSocial[domain].present = true;
@@ -1159,6 +1159,7 @@ void InitializeWebView() {
                                         if (uri.find(L".js") != std::wstring::npos) guessedResourceType = L"Script";
                                         else if (uri.find(L".css") != std::wstring::npos) guessedResourceType = L"CSS";
                                         else if (uri.find(L".jpg") != std::wstring::npos || uri.find(L".jpeg") != std::wstring::npos || uri.find(L".png") != std::wstring::npos || uri.find(L".gif") != std::wstring::npos || uri.find(L".svg") != std::wstring::npos || uri.find(L".webp") != std::wstring::npos) guessedResourceType = L"Resim";
+                                        else if (uri.find(L".mp4") != std::wstring::npos || uri.find(L".webm") != std::wstring::npos || uri.find(L".mkv") != std::wstring::npos || uri.find(L".mov") != std::wstring::npos || uri.find(L".avi") != std::wstring::npos || uri.find(L".mp3") != std::wstring::npos || uri.find(L".wav") != std::wstring::npos || uri.find(L".ogg") != std::wstring::npos) guessedResourceType = L"Medya";
                                         else if (uri.find(L".woff") != std::wstring::npos || uri.find(L".ttf") != std::wstring::npos) guessedResourceType = L"Font";
                                         else if (uri.find(L"api") != std::wstring::npos || uri.find(L"fetch") != std::wstring::npos || uri.find(L"xmlhttprequest") != std::wstring::npos) guessedResourceType = L"Veri (API/XHR)";
                                         else if (uri.find(L".html") != std::wstring::npos || uri.find(L".htm") != std::wstring::npos || (statusCode == 200 && uri.find(L".") == std::wstring::npos && !uri.empty() && uri.back() != L'/')) guessedResourceType = L"Belge";
@@ -1189,7 +1190,7 @@ void InitializeWebView() {
                                         if (contentLengthBytes != -1) contentLengthStr = FormatBytes(contentLengthBytes);
 
                                         std::wstring shortUri = uri;
-                                        if (guessedResourceType != L"Resim" && shortUri.length() > 60) {
+                                        if (guessedResourceType != L"Resim" && guessedResourceType != L"Medya" && shortUri.length() > 60) {
                                             shortUri = shortUri.substr(0, 57) + L"...";
                                         }
 
@@ -1197,14 +1198,18 @@ void InitializeWebView() {
                                         if (uri.rfind(L"https://", 0) == 0) securityStatus = L"Güvenli (HTTPS)";
                                         else if (uri.rfind(L"http://", 0) == 0) securityStatus = L"Güvensiz (HTTP)";
 
+                                        bool isMedia = (guessedResourceType == L"Resim" || guessedResourceType == L"Medya" ||
+                                            contentType.rfind(L"image/", 0) == 0 ||
+                                            contentType.rfind(L"video/", 0) == 0 ||
+                                            contentType.rfind(L"audio/", 0) == 0);
 
-                                        if (guessedResourceType == L"Resim") {
-                                            WriteToSpecificLog(g_imageLogFile, L"[" + contentType + L"] " + uri + L", Boyut: " + contentLengthStr + L", Durum: " + std::to_wstring(statusCode));
+                                        if (isMedia) {
+                                            WriteToSpecificLog(g_mediaLogFile, L"[" + contentType + L"] " + uri + L", Boyut: " + contentLengthStr + L", Durum: " + std::to_wstring(statusCode));
                                         }
                                         else if (guessedResourceType == L"Veri (API/XHR)" || guessedResourceType == L"Belge" || statusCode >= 400) {
                                             WriteToSpecificLog(g_httpDetailsFile, L"[" + guessedResourceType + L"] " + shortUri + L" yanıtladı: " + std::to_wstring(statusCode) + L" (Boyut: " + contentLengthStr + L", Tip: " + contentType + L", Güvenlik: " + securityStatus + L")");
                                         }
-                                        else if (guessedResourceType == L"Font" || guessedResourceType == L"CSS" || guessedResourceType == L"Medya" || (contentLengthBytes > 10 * 1024 && guessedResourceType != L"Script")) {
+                                        else if (guessedResourceType == L"Font" || guessedResourceType == L"CSS" || (contentLengthBytes > 10 * 1024 && guessedResourceType != L"Script")) {
                                             WriteToSpecificLog(g_httpDetailsFile, L"[" + guessedResourceType + L"] " + shortUri + L" yüklendi, Boyut: " + contentLengthStr + L", Güvenlik: " + securityStatus);
                                         }
 
@@ -1264,50 +1269,59 @@ void InitializeWebView() {
                                 [](ICoreWebView2* sender, ICoreWebView2WebMessageReceivedEventArgs* args) -> HRESULT {
                                     PWSTR message_pwstr = nullptr;
                                     args->TryGetWebMessageAsString(&message_pwstr);
-                                    if (message_pwstr) {
-                                        std::wstring message = message_pwstr;
-                                        CoTaskMemFree(message_pwstr);
+                                    if (!message_pwstr) {
+                                        return S_OK;
+                                    }
 
-                                        // --- WHATSAPP MESAJ İŞLEME MANTIĞI ---
-                                        if (message.rfind(L"WHATSAPP_ACTIVITY:", 0) == 0) {
-                                            std::wstring activity = message.substr(18);
-                                            if (activity == L"online") {
-                                                if (!g_isWhatsappUserOnline) {
-                                                    g_isWhatsappUserOnline = true;
-                                                    g_whatsappOnlineStartTime = std::chrono::steady_clock::now();
-                                                    LogWhatsappStatus(g_targetWhatsappUser + L" çevrimiçi oldu.");
-                                                }
+                                    std::wstring message = message_pwstr;
+                                    CoTaskMemFree(message_pwstr);
+
+                                    // Yeni JSON tabanlı JS loglama sistemi
+                                    if (g_isCaptureActive && message.rfind(L"{\"type\":", 0) == 0) {
+                                        WriteToSpecificLog(g_jsDetailsFile, message);
+                                        return S_OK;
+                                    }
+
+                                    // --- ESKİ DÜZ METİN TABANLI MESAJ İŞLEME ---
+
+                                    // --- WHATSAPP MESAJ İŞLEME MANTIĞI ---
+                                    if (message.rfind(L"WHATSAPP_ACTIVITY:", 0) == 0) {
+                                        std::wstring activity = message.substr(18);
+                                        if (activity == L"online") {
+                                            if (!g_isWhatsappUserOnline) {
+                                                g_isWhatsappUserOnline = true;
+                                                g_whatsappOnlineStartTime = std::chrono::steady_clock::now();
+                                                LogWhatsappStatus(g_targetWhatsappUser + L" çevrimiçi oldu.");
                                             }
-                                            else {
-                                                if (g_isWhatsappUserOnline) {
-                                                    g_isWhatsappUserOnline = false;
-                                                    auto endTime = std::chrono::steady_clock::now();
-                                                    auto duration = std::chrono::duration_cast<std::chrono::seconds>(endTime - g_whatsappOnlineStartTime);
-                                                    long long totalSeconds = duration.count();
-                                                    long long minutes = totalSeconds / 60;
-                                                    long long seconds = totalSeconds % 60;
-
-                                                    std::wstring durationStr = L" (Süre: " + std::to_wstring(minutes) + L"dk " + std::to_wstring(seconds) + L"sn)";
-                                                    LogWhatsappStatus(g_targetWhatsappUser + L" çevrimdışı oldu." + durationStr);
-                                                }
-                                                // "yazıyor..." gibi diğer durumları logla
-                                                if (activity != g_lastWhatsappActivity && activity != L"offline") {
-                                                    LogWhatsappStatus(g_targetWhatsappUser + L" durum: " + activity);
-                                                }
+                                        }
+                                        else {
+                                            if (g_isWhatsappUserOnline) {
+                                                g_isWhatsappUserOnline = false;
+                                                auto endTime = std::chrono::steady_clock::now();
+                                                auto duration = std::chrono::duration_cast<std::chrono::seconds>(endTime - g_whatsappOnlineStartTime);
+                                                long long totalSeconds = duration.count();
+                                                long long minutes = totalSeconds / 60;
+                                                long long seconds = totalSeconds % 60;
+                                                std::wstring durationStr = L" (Süre: " + std::to_wstring(minutes) + L"dk " + std::to_wstring(seconds) + L"sn)";
+                                                LogWhatsappStatus(g_targetWhatsappUser + L" çevrimdışı oldu." + durationStr);
                                             }
-                                            g_lastWhatsappActivity = activity;
+                                            if (activity != g_lastWhatsappActivity && activity != L"offline") {
+                                                LogWhatsappStatus(g_targetWhatsappUser + L" durum: " + activity);
+                                            }
                                         }
-                                        else if (message.rfind(L"DETAIL:", 0) == 0) {
-                                            LogWhatsappDetails(L"[JS BİLGİ] " + message.substr(7));
-                                        }
-                                        else if (message.rfind(L"ERROR:", 0) == 0) {
-                                            LogWhatsappDetails(L"[JS HATA] " + message.substr(6));
-                                        }
-                                        else if (message.rfind(L"LOG_SUMMARY:", 0) == 0) {
-                                            LogWhatsappDetails(L"[JS RAPOR]\r\n" + message.substr(12));
-                                        }
-
-                                        // Mevcut hover mesajı mantığı
+                                        g_lastWhatsappActivity = activity;
+                                    }
+                                    else if (message.rfind(L"DETAIL:", 0) == 0) {
+                                        LogWhatsappDetails(L"[JS BİLGİ] " + message.substr(7));
+                                    }
+                                    else if (message.rfind(L"ERROR:", 0) == 0) {
+                                        LogWhatsappDetails(L"[JS HATA] " + message.substr(6));
+                                    }
+                                    else if (message.rfind(L"LOG_SUMMARY:", 0) == 0) {
+                                        LogWhatsappDetails(L"[JS RAPOR]\r\n" + message.substr(12));
+                                    }
+                                    // Mevcut hover mesajı mantığı
+                                    else {
                                         const std::wstring hoverPrefix = L"HOVER_URL:";
                                         if (message.rfind(hoverPrefix, 0) == 0) {
                                             if (message.rfind(L"javascript:", hoverPrefix.length()) != 0) {
@@ -1324,6 +1338,7 @@ void InitializeWebView() {
                                             UpdateStatusBar();
                                         }
                                     }
+
                                     return S_OK;
                                 }).Get(), &m_webMessageReceivedToken);
 
@@ -1425,17 +1440,61 @@ void InitializeWebView() {
                                 g_webview_v2->add_DOMContentLoaded(Callback<ICoreWebView2DOMContentLoadedEventHandler>(
                                     [](ICoreWebView2* sender, ICoreWebView2DOMContentLoadedEventArgs* args) -> HRESULT {
                                         Log(L"DOMContentLoaded", L"Sayfa DOM yüklendi.");
-                                        if (sender && g_isCaptureActive) sender->ExecuteScript(LR"( 
-                                            (function() {
-                                                let tech = {};
-                                                if (typeof jQuery !== 'undefined') tech.jQuery = jQuery.fn.jquery || 'detected';
-                                                if (typeof React !== 'undefined') tech.React = (typeof React.version !== 'undefined' ? React.version : 'detected');
-                                                if (typeof Vue !== 'undefined') tech.Vue = (typeof Vue.version !== 'undefined' ? Vue.version : 'detected');
-                                                if (typeof angular !== 'undefined') tech.Angular = (typeof angular.version !== 'undefined' && angular.version.full ? angular.version.full : 'detected');
-                                                let generatorMeta = document.querySelector('meta[name="generator"]');
-                                                if (generatorMeta) tech.Generator = generatorMeta.content;
-                                            })();
-                                        )", nullptr);
+                                        if (sender && g_isCaptureActive) {
+                                            const wchar_t* jsLoggingScript = LR"(
+                                                (function() {
+                                                    if (window.jsBridgeInjected) { return; }
+                                                    window.jsBridgeInjected = true;
+                                                    const post = (msg) => {
+                                                        try { window.chrome.webview.postMessage(JSON.stringify(msg)); } catch (e) {}
+                                                    };
+                                                    const consoleMethods = ['log', 'info', 'warn', 'error', 'debug'];
+                                                    consoleMethods.forEach(level => {
+                                                        const original = console[level];
+                                                        console[level] = function(...args) {
+                                                            try {
+                                                                const message = args.map(arg => {
+                                                                    if (arg instanceof Error) return arg.stack || arg.message;
+                                                                    if (arg instanceof Node) return 'DOMNode';
+                                                                    if (arg instanceof Window) return 'Window';
+                                                                    if (typeof arg === 'object' && arg !== null) {
+                                                                        try { return JSON.stringify(arg); } catch (e) { return '[Circular Object]'; }
+                                                                    }
+                                                                    if (typeof arg === 'function') return '[Function]';
+                                                                    return String(arg);
+                                                                });
+                                                                post({ type: 'console', level: level, message: '[' + message.join(', ') + ']' });
+                                                            } catch (e) {
+                                                                post({ type: 'console', level: 'error', message: '["Error serializing console message."]' });
+                                                            }
+                                                            original.apply(console, args);
+                                                        };
+                                                    });
+                                                    window.addEventListener('error', function(e) {
+                                                        post({ type: 'error', message: e.message, source: e.filename || '?', lineno: e.lineno || 0, colno: e.colno || 0 });
+                                                    });
+                                                    window.addEventListener('unhandledrejection', function(e) {
+                                                        let reason = 'Unknown';
+                                                        if (e.reason) { reason = e.reason.stack || e.reason.message || String(e.reason); }
+                                                        post({ type: 'error', message: 'Unhandled promise rejection: ' + reason, source: 'Promise' });
+                                                    });
+                                                    post({ type: 'console', level: 'info', message: '["JavaScript logging bridge injected."]' });
+                                                })();
+                                            )";
+                                            sender->ExecuteScript(jsLoggingScript, nullptr);
+
+                                            sender->ExecuteScript(LR"(
+                                                (function() {
+                                                    let tech = {};
+                                                    if (typeof jQuery !== 'undefined') tech.jQuery = jQuery.fn.jquery || 'detected';
+                                                    if (typeof React !== 'undefined') tech.React = (typeof React.version !== 'undefined' ? React.version : 'detected');
+                                                    if (typeof Vue !== 'undefined') tech.Vue = (typeof Vue.version !== 'undefined' ? Vue.version : 'detected');
+                                                    if (typeof angular !== 'undefined') tech.Angular = (typeof angular.version !== 'undefined' && angular.version.full ? angular.version.full : 'detected');
+                                                    let generatorMeta = document.querySelector('meta[name="generator"]');
+                                                    if (generatorMeta) tech.Generator = generatorMeta.content;
+                                                })();
+                                            )", nullptr);
+                                        }
                                         return S_OK;
                                     }).Get(), &m_DOMContentLoadedToken);
                             }
@@ -1500,7 +1559,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
         g_hLogBtn = CreateWindowW(L"BUTTON", L"Log", WS_CHILD | WS_VISIBLE, btnX, currentY, logButtonWidth, controlHeight, hwnd, (HMENU)ID_LOG_BTN, nullptr, nullptr); btnX += logButtonWidth + padding;
         g_hJsLogBtn = CreateWindowW(L"BUTTON", L"JSLog", WS_CHILD | WS_VISIBLE, btnX, currentY, logButtonWidth, controlHeight, hwnd, (HMENU)ID_JS_LOG_BTN, nullptr, nullptr); btnX += logButtonWidth + padding;
         g_hHttpLogBtn = CreateWindowW(L"BUTTON", L"HTTPLog", WS_CHILD | WS_VISIBLE, btnX, currentY, logButtonWidth, controlHeight, hwnd, (HMENU)ID_HTTP_LOG_BTN, nullptr, nullptr); btnX += logButtonWidth + padding;
-        g_hImgLogBtn = CreateWindowW(L"BUTTON", L"ImgLog", WS_CHILD | WS_VISIBLE, btnX, currentY, logButtonWidth, controlHeight, hwnd, (HMENU)ID_IMG_LOG_BTN, nullptr, nullptr); btnX += logButtonWidth + padding;
+        g_hMediaLogBtn = CreateWindowW(L"BUTTON", L"MediaLog", WS_CHILD | WS_VISIBLE, btnX, currentY, logButtonWidth, controlHeight, hwnd, (HMENU)ID_MEDIA_LOG_BTN, nullptr, nullptr); btnX += logButtonWidth + padding;
         g_hAltInfoBtn = CreateWindowW(L"BUTTON", L"AltInfo", WS_CHILD | WS_VISIBLE, btnX, currentY, logButtonWidth, controlHeight, hwnd, (HMENU)ID_ALT_INFO_BTN, nullptr, nullptr); btnX += logButtonWidth + padding;
         g_hFoundForBtn = CreateWindowW(L"BUTTON", L"Bul", WS_CHILD | WS_VISIBLE, btnX, currentY, logButtonWidth, controlHeight, hwnd, (HMENU)ID_FOUND_FOR_BTN, nullptr, nullptr); btnX += logButtonWidth + padding;
         g_hNetLogBtn = CreateWindowW(L"BUTTON", L"NetLog", WS_CHILD | WS_VISIBLE, btnX, currentY, logButtonWidth, controlHeight, hwnd, (HMENU)ID_NETLOG_BTN, nullptr, nullptr); btnX += logButtonWidth + padding;
@@ -1559,7 +1618,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             MoveWindow(g_hLogBtn, btnX, currentY, logButtonWidth, controlHeight, TRUE); btnX += logButtonWidth + padding;
             MoveWindow(g_hJsLogBtn, btnX, currentY, logButtonWidth, controlHeight, TRUE); btnX += logButtonWidth + padding;
             MoveWindow(g_hHttpLogBtn, btnX, currentY, logButtonWidth, controlHeight, TRUE); btnX += logButtonWidth + padding;
-            MoveWindow(g_hImgLogBtn, btnX, currentY, logButtonWidth, controlHeight, TRUE); btnX += logButtonWidth + padding;
+            MoveWindow(g_hMediaLogBtn, btnX, currentY, logButtonWidth, controlHeight, TRUE); btnX += logButtonWidth + padding;
             MoveWindow(g_hAltInfoBtn, btnX, currentY, logButtonWidth, controlHeight, TRUE); btnX += logButtonWidth + padding;
             MoveWindow(g_hFoundForBtn, btnX, currentY, logButtonWidth, controlHeight, TRUE); btnX += logButtonWidth + padding;
             MoveWindow(g_hNetLogBtn, btnX, currentY, logButtonWidth, controlHeight, TRUE); btnX += logButtonWidth + padding;
@@ -1681,9 +1740,9 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             if (g_isCaptureActive) ShellExecute(NULL, L"open", g_httpDetailsFile.c_str(), NULL, NULL, SW_SHOWNORMAL);
             else MessageBox(hwnd, L"HTTP Loglarını görüntülemek için 'Capture Log' aktif olmalıdır.", L"Bilgi", MB_OK | MB_ICONINFORMATION);
             break;
-        case ID_IMG_LOG_BTN:
-            if (g_isCaptureActive) ShellExecute(NULL, L"open", g_imageLogFile.c_str(), NULL, NULL, SW_SHOWNORMAL);
-            else MessageBox(hwnd, L"Resim Loglarını görüntülemek için 'Capture Log' aktif olmalıdır.", L"Bilgi", MB_OK | MB_ICONINFORMATION);
+        case ID_MEDIA_LOG_BTN:
+            if (g_isCaptureActive) ShellExecute(NULL, L"open", g_mediaLogFile.c_str(), NULL, NULL, SW_SHOWNORMAL);
+            else MessageBox(hwnd, L"Medya Loglarını görüntülemek için 'Capture Log' aktif olmalıdır.", L"Bilgi", MB_OK | MB_ICONINFORMATION);
             break;
         case ID_ALT_INFO_BTN:
             if (g_isCaptureActive) ShellExecute(NULL, L"open", g_altInfoFile.c_str(), NULL, NULL, SW_SHOWNORMAL);
@@ -1713,7 +1772,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             if (g_isCaptureActive && !wasCaptureActive) {
                 WriteToSpecificLog(g_httpDetailsFile, L"--- YAKALAMA BAŞLADI ---", true, true);
                 WriteToSpecificLog(g_jsDetailsFile, L"--- YAKALAMA BAŞLADI ---", true, true);
-                WriteToSpecificLog(g_imageLogFile, L"--- YAKALAMA BAŞLADI ---", true, true);
+                WriteToSpecificLog(g_mediaLogFile, L"--- YAKALAMA BAŞLADI ---", true, true);
                 WriteToSpecificLog(g_netLogFile, L"--- YAKALAMA BAŞLADI ---", true, true);
                 WriteToSpecificLog(g_altInfoFile, L"--- YAKALAMA BAŞLADI ---", true, true);
                 WriteToSpecificLog(g_foundForFile, L"--- YAKALAMA BAŞLADI ---", true, true);
@@ -1828,7 +1887,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
     g_logStatusFile = g_appDir + L"logstatus.txt";
     g_jsDetailsFile = g_appDir + L"javascript_details.txt";
     g_httpDetailsFile = g_appDir + L"http_details.txt";
-    g_imageLogFile = g_appDir + L"image_log.txt";
+    g_mediaLogFile = g_appDir + L"media_log.txt";
     g_altInfoFile = g_appDir + L"alt_info.txt";
     g_foundForFile = g_appDir + L"foundfor.txt";
     g_searchForFile = g_appDir + L"searchfor.txt";
